@@ -1111,4 +1111,9 @@ html {
   padding: 40px 20px;
   text-align: center;
 }
+.logo {
+  width: 60px;   /* Adjust as needed */
+  height: auto;
+  border-radius: 4px; /* Optional for rounded edges */
+}
 
