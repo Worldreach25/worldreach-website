@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Worldreach Global Resources Limited - Flange Management Solutions</title>
@@ -241,6 +243,32 @@ To be the most trusted provider of integrated joint integrity solutions, recogni
                 </div>
             </div>
         </div>
+<section class="gallery-section">
+  <h2>Our Project Gallery</h2>
+
+  <!-- Swiper Container -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <img src="gallery/gallery-1.jpg" alt="Gallery Image 1" />
+      </div>
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <img src="gallery/gallery-2.jpg" alt="Gallery Image 2" />
+      </div>
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <img src="gallery/gallery-3.jpg" alt="Gallery Image 3" />
+      </div>
+      <!-- Add more slides as needed -->
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
     </section>
 <section id="gallery" class="gallery">
   <h2>Our Project Gallery</h2>
@@ -489,6 +517,27 @@ To be the most trusted provider of integrated joint integrity solutions, recogni
     </footer>
 
     <script src="script.js"></script>
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    slidesPerView: 1,
+    spaceBetween: 20,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
 </body>
 </html>
 
