@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>World Reach Global Resources | Engineering, Maintenance & Field Support</title>
   <meta name="description" content="World Reach Global Resources delivers specialized engineering, maintenance, joint integrity, leak repair, fabrication, and field support solutions for oil & gas, energy, and industrial sectors." />
+
+  <!-- Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -14,6 +21,7 @@
       background: #ffffff;
       line-height: 1.6;
     }
+
     a { text-decoration: none; color: inherit; }
     img { max-width: 100%; display: block; }
     .container { width: 90%; max-width: 1200px; margin: 0 auto; }
@@ -27,29 +35,35 @@
       color: #fff;
       box-shadow: 0 2px 10px rgba(0,0,0,0.15);
     }
+
     .nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 18px 0;
     }
+
     .logo {
       font-size: 1.35rem;
       font-weight: bold;
       color: #d4af37;
       letter-spacing: 0.3px;
     }
+
     .nav-links {
       display: flex;
       gap: 24px;
       align-items: center;
     }
+
     .nav-links a {
       color: #e2e8f0;
       font-size: 0.95rem;
       transition: color 0.3s ease;
     }
+
     .nav-links a:hover { color: #d4af37; }
+
     .btn-nav {
       background: #d4af37;
       color: #0f172a !important;
@@ -65,25 +79,30 @@
       color: white;
       padding: 110px 0 90px;
     }
+
     .hero-content {
       max-width: 760px;
     }
+
     .hero h1 {
       font-size: 3rem;
       line-height: 1.15;
       margin-bottom: 20px;
     }
+
     .hero p {
       font-size: 1.08rem;
       color: #e2e8f0;
       margin-bottom: 32px;
       max-width: 680px;
     }
+
     .hero-buttons {
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
     }
+
     .btn-primary, .btn-secondary {
       display: inline-block;
       padding: 14px 24px;
@@ -91,18 +110,22 @@
       font-weight: bold;
       transition: transform 0.25s ease, background 0.25s ease;
     }
+
     .btn-primary {
       background: #d4af37;
       color: #0f172a;
     }
+
     .btn-primary:hover {
       background: #c49b23;
       transform: translateY(-2px);
     }
+
     .btn-secondary {
       border: 2px solid #ffffff;
       color: #ffffff;
     }
+
     .btn-secondary:hover {
       background: rgba(255,255,255,0.1);
       transform: translateY(-2px);
@@ -113,11 +136,13 @@
       padding: 70px 0;
       background: #f8fafc;
     }
+
     .highlight-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 22px;
     }
+
     .highlight-card {
       background: #fff;
       padding: 28px 24px;
@@ -125,25 +150,34 @@
       box-shadow: 0 6px 18px rgba(0,0,0,0.05);
       border-top: 4px solid #d4af37;
     }
+
     .highlight-card h3 {
       margin-bottom: 10px;
       font-size: 1.15rem;
     }
+
     .highlight-card p {
       color: #475569;
       font-size: 0.98rem;
     }
 
-    /* About */
-    .about {
+    /* Sections */
+    .about,
+    .services-section,
+    .contact {
       padding: 90px 0;
-      background: #ffffff;
     }
+
+    .about { background: #ffffff; }
+    .services-section { background: #f8f9fb; }
+    .contact { background: #ffffff; }
+
     .section-title {
       text-align: center;
       margin-bottom: 18px;
       font-size: 2.3rem;
     }
+
     .section-intro {
       text-align: center;
       max-width: 850px;
@@ -151,48 +185,53 @@
       color: #475569;
       font-size: 1.05rem;
     }
-    .about-grid {
+
+    .about-grid,
+    .contact-grid {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
       gap: 40px;
       align-items: center;
     }
+
     .about-text h3 {
       font-size: 1.8rem;
       margin-bottom: 16px;
     }
+
     .about-text p {
       color: #475569;
       margin-bottom: 18px;
       font-size: 1rem;
     }
+
     .about-box {
       background: #0f172a;
       color: #fff;
       padding: 36px;
       border-radius: 14px;
     }
+
     .about-box h4 {
       color: #d4af37;
       margin-bottom: 14px;
       font-size: 1.4rem;
     }
+
     .about-box ul {
       list-style: none;
     }
+
     .about-box li {
       margin-bottom: 12px;
       color: #e2e8f0;
     }
 
     /* Services */
-    .services-section {
-      padding: 90px 0;
-      background: #f8f9fb;
-    }
     .service-category {
       margin-bottom: 60px;
     }
+
     .service-category h3 {
       font-size: 1.8rem;
       color: #0f172a;
@@ -200,11 +239,13 @@
       border-left: 5px solid #d4af37;
       padding-left: 15px;
     }
+
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 24px;
     }
+
     .service-card {
       background: #ffffff;
       padding: 28px 24px;
@@ -212,18 +253,23 @@
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .service-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
     }
+
     .service-card h4 {
       font-size: 1.25rem;
       margin-bottom: 12px;
     }
+
     .service-card p {
       color: #475569;
       font-size: 0.98rem;
+      margin-bottom: 10px;
     }
+
     .quality-section {
       background: #0f172a;
       color: #ffffff;
@@ -232,15 +278,67 @@
       margin-top: 20px;
       margin-bottom: 60px;
     }
+
     .quality-section h3 {
       font-size: 1.8rem;
       margin-bottom: 18px;
       color: #d4af37;
     }
+
     .quality-section p {
       font-size: 1rem;
       line-height: 1.8;
       color: #e2e8f0;
+    }
+
+    /* Gallery Slider */
+    .projectSwiper {
+      padding-bottom: 55px;
+      overflow: hidden;
+    }
+
+    .gallery-slide {
+      background: #ffffff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    .gallery-slide img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-caption {
+      padding: 20px;
+    }
+
+    .gallery-caption h4 {
+      font-size: 20px;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    .gallery-caption p {
+      font-size: 15px;
+      color: #475569;
+      line-height: 1.7;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #d4af37;
+    }
+
+    .swiper-pagination-bullet {
+      background: #94a3b8;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #d4af37;
     }
 
     /* CTA */
@@ -250,10 +348,12 @@
       color: white;
       text-align: center;
     }
+
     .cta-section h2 {
       font-size: 2.3rem;
       margin-bottom: 16px;
     }
+
     .cta-section p {
       max-width: 760px;
       margin: 0 auto 28px;
@@ -262,46 +362,37 @@
     }
 
     /* Contact */
-    .contact {
-      padding: 90px 0;
-      background: #ffffff;
-    }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 34px;
-      align-items: start;
-    }
-    .contact-info {
-      background: #f8fafc;
-      padding: 34px;
-      border-radius: 14px;
-    }
-    .contact-info h3 {
-      font-size: 1.7rem;
-      margin-bottom: 18px;
-    }
-    .contact-info p {
-      color: #475569;
-      margin-bottom: 14px;
-    }
+    .contact-info,
     .contact-form {
       background: #f8fafc;
       padding: 34px;
       border-radius: 14px;
+    }
+
+    .contact-form {
       box-shadow: 0 6px 20px rgba(0,0,0,0.05);
     }
+
+    .contact-info h3,
     .contact-form h3 {
       font-size: 1.7rem;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
+
+    .contact-info p {
+      color: #475569;
+      margin-bottom: 14px;
+    }
+
     .form-group { margin-bottom: 16px; }
+
     .form-group label {
       display: block;
       margin-bottom: 8px;
       font-weight: bold;
       font-size: 0.95rem;
     }
+
     .form-group input,
     .form-group select,
     .form-group textarea {
@@ -313,6 +404,7 @@
       outline: none;
       background: #fff;
     }
+
     .form-group textarea {
       min-height: 140px;
       resize: vertical;
@@ -333,30 +425,37 @@
       .contact-grid {
         grid-template-columns: 1fr;
       }
+
       .hero h1 {
         font-size: 2.5rem;
       }
     }
+
     @media (max-width: 768px) {
       .nav {
         flex-direction: column;
         gap: 14px;
       }
+
       .nav-links {
         flex-wrap: wrap;
         justify-content: center;
         gap: 14px;
       }
+
       .hero {
         padding: 85px 0 75px;
       }
+
       .hero h1 {
         font-size: 2rem;
       }
+
       .section-title,
       .cta-section h2 {
         font-size: 1.9rem;
       }
+
       .service-category h3,
       .quality-section h3,
       .about-text h3,
@@ -369,18 +468,22 @@
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <div class="container nav">
       <div class="logo">World Reach Global Resources</div>
       <nav class="nav-links">
         <a href="#about">About</a>
         <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#partners">Partners</a>
         <a href="#contact">Contact</a>
         <a href="#contact" class="btn-nav">Request a Quote</a>
       </nav>
     </div>
   </header>
 
+  <!-- Hero -->
   <section class="hero">
     <div class="container hero-content">
       <h1>Engineering, Maintenance & Field Support Solutions for Critical Operations</h1>
@@ -396,6 +499,7 @@
     </div>
   </section>
 
+  <!-- Highlights -->
   <section class="highlights">
     <div class="container">
       <div class="highlight-grid">
@@ -419,6 +523,7 @@
     </div>
   </section>
 
+  <!-- About -->
   <section id="about" class="about">
     <div class="container">
       <h2 class="section-title">About Us</h2>
@@ -426,6 +531,7 @@
         We support industrial operations with dependable engineering, maintenance, and field service solutions designed to keep critical systems safe, efficient, and operational.
       </p>
 
+      <!-- Mission / Vision -->
       <div class="about-grid" style="margin-bottom:40px;">
         <div class="about-box" style="background:#f8fafc; color:#0f172a;">
           <h4 style="color:#0f172a;">Our Mission</h4>
@@ -467,6 +573,7 @@
     </div>
   </section>
 
+  <!-- Services -->
   <section id="services" class="services-section">
     <div class="container">
       <h2 class="section-title">Our Services</h2>
@@ -477,10 +584,35 @@
       <div class="service-category">
         <h3>Core Joint Integrity & Technical Services</h3>
         <div class="services-grid">
-          <div class="service-card"><h4>Flange Management</h4><p>Complete lifecycle management of flange connections to ensure leak-free, safe, and reliable operations across critical systems.</p><p style="margin-top:12px;"><strong>Our Work Methodology</strong></p><p><strong>1. Engineering Review:</strong> Evaluation of flange type, gasket, bolting, and torque requirements.</p><p><strong>2. Controlled Assembly:</strong> Hydraulic torque or tensioning using calibrated equipment.</p><p><strong>3. Verification &amp; Inspection:</strong> Load verification, leak checks, and quality assurance.</p><p><strong>4. Documentation:</strong> Complete reporting for traceability and compliance.</p><p style="margin-top:12px;"><strong>Certifications &amp; Standards</strong></p><p>We operate in strict compliance with international and industry-recognized standards including ASME PCC-1, API RP 621, ISO 9001, OEM torque &amp; tensioning specifications, and site-specific HSE procedures.</p></div>
-          <div class="service-card"><h4>Joint Integrity Services</h4><p>Inspection, verification, and technical support solutions that help maintain the reliability and safety of bolted joint systems.</p></div>
-          <div class="service-card"><h4>On-Site Technical Support</h4><p>Skilled technical personnel available to support field execution, maintenance operations, and specialized industrial requirements.</p></div>
-          <div class="service-card"><h4>Maintenance & Inspection</h4><p>Preventive and corrective maintenance support, including inspection services aimed at improving operational efficiency and asset integrity.</p></div>
+
+          <div class="service-card">
+            <h4>Flange Management</h4>
+            <p>Complete lifecycle management of flange connections to ensure leak-free, safe, and reliable operations across critical systems.</p>
+
+            <p><strong>Our Work Methodology</strong></p>
+            <p><strong>1. Engineering Review:</strong> Evaluation of flange type, gasket, bolting, and torque requirements.</p>
+            <p><strong>2. Controlled Assembly:</strong> Hydraulic torque or tensioning using calibrated equipment.</p>
+            <p><strong>3. Verification &amp; Inspection:</strong> Load verification, leak checks, and quality assurance.</p>
+            <p><strong>4. Documentation:</strong> Complete reporting for traceability and compliance.</p>
+
+            <p><strong>Certifications &amp; Standards</strong></p>
+            <p>We operate in strict compliance with international and industry-recognized standards including ASME PCC-1, API RP 621, ISO 9001, OEM torque &amp; tensioning specifications, and site-specific HSE procedures.</p>
+          </div>
+
+          <div class="service-card">
+            <h4>Joint Integrity Services</h4>
+            <p>Inspection, verification, and technical support solutions that help maintain the reliability and safety of bolted joint systems.</p>
+          </div>
+
+          <div class="service-card">
+            <h4>On-Site Technical Support</h4>
+            <p>Skilled technical personnel available to support field execution, maintenance operations, and specialized industrial requirements.</p>
+          </div>
+
+          <div class="service-card">
+            <h4>Maintenance &amp; Inspection</h4>
+            <p>Preventive and corrective maintenance support, including inspection services aimed at improving operational efficiency and asset integrity.</p>
+          </div>
         </div>
       </div>
 
@@ -488,11 +620,11 @@
         <h3>Additional Engineering & Maintenance Services</h3>
         <div class="services-grid">
           <div class="service-card"><h4>Under Pressure Leak Repair</h4><p>Engineered leak-sealing solutions designed to help clients maintain system integrity and minimize downtime without unnecessary shutdowns.</p></div>
-          <div class="service-card"><h4>Topside & Subsea Repair Clamps</h4><p>Supply and technical support for OEM repair clamps sourced through strategic global partnerships for both topside and subsea applications.</p></div>
+          <div class="service-card"><h4>Topside &amp; Subsea Repair Clamps</h4><p>Supply and technical support for OEM repair clamps sourced through strategic global partnerships for both topside and subsea applications.</p></div>
           <div class="service-card"><h4>Well Intervention Support</h4><p>Specialized support services for modifying well conditions, conducting diagnostics, and improving production performance.</p></div>
           <div class="service-card"><h4>Cold Cutting Services</h4><p>Safe, spark-free cutting solutions for tanks, pipelines, and industrial components in hazardous or sensitive operating environments.</p></div>
-          <div class="service-card"><h4>Fabrication & Welding Services</h4><p>Responsive fabrication and welding support for plant maintenance, equipment repairs, and project execution requirements.</p></div>
-          <div class="service-card"><h4>Integrated Power & UPS Solutions</h4><p>Customized uninterrupted power supply systems designed to support office, field, and production-critical operations.</p></div>
+          <div class="service-card"><h4>Fabrication &amp; Welding Services</h4><p>Responsive fabrication and welding support for plant maintenance, equipment repairs, and project execution requirements.</p></div>
+          <div class="service-card"><h4>Integrated Power &amp; UPS Solutions</h4><p>Customized uninterrupted power supply systems designed to support office, field, and production-critical operations.</p></div>
         </div>
       </div>
 
@@ -501,9 +633,9 @@
         <div class="services-grid">
           <div class="service-card"><h4>Pipeline Pre-Commissioning Support</h4><p>Technical support services to help ensure piping and pipeline systems are prepared for safe, reliable, and efficient operation.</p></div>
           <div class="service-card"><h4>Cased Hole Support Services</h4><p>Support for production logging, perforation, plug and packer setting, and multi-finger caliper operations.</p></div>
-          <div class="service-card"><h4>Oil & Gas Facilities Maintenance</h4><p>Certified maintenance support including hydro-jetting, flushing, chemical cleaning, nitrogen leak testing, integrity testing, and tank calibration.</p></div>
+          <div class="service-card"><h4>Oil &amp; Gas Facilities Maintenance</h4><p>Certified maintenance support including hydro-jetting, flushing, chemical cleaning, nitrogen leak testing, integrity testing, and tank calibration.</p></div>
           <div class="service-card"><h4>Industrial Scaffolding Services</h4><p>Safe and dependable scaffolding solutions for industrial maintenance, shutdowns, and construction support.</p></div>
-          <div class="service-card"><h4>Rigging & Lifting Services</h4><p>Specialized lifting and rigging support for both offshore and onshore oil and gas operations.</p></div>
+          <div class="service-card"><h4>Rigging &amp; Lifting Services</h4><p>Specialized lifting and rigging support for both offshore and onshore oil and gas operations.</p></div>
           <div class="service-card"><h4>BOP Nipple Up / Nipple Down Services</h4><p>Installation, assembly, dismantling, and removal of BOP stacks and pressure control equipment with a strong focus on safety and precision.</p></div>
         </div>
       </div>
@@ -517,58 +649,101 @@
     </div>
   </section>
 
-  </section>
-<section id="gallery">
-  <h2>Our Project Gallery</h2>
-  <!-- Swiper container -->
-  <div class="swiper-container">
-    <!-- Wrapper for slides -->
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="gallery/gallery-1.jpg" alt="Image 1" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-2.jpg" alt="Image 2" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-3.jpg" alt="Image 3" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-4.jpg" alt="Image 4" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-5.jpg" alt="Image 5" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-6.jpg" alt="Image 6" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-7.jpg" alt="Image 7" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-8.jpg" alt="Image 8" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-9.jpg" alt="Image 9" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-10.jpg" alt="Image 10" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-11.jpg" alt="Image 11" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-12.jpg" alt="Image 12" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-13.jpg" alt="Image 13" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-14.jpg" alt="Image 14" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-15.jpg" alt="Image 15" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-16.jpg" alt="Image 16" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-17.jpg" alt="Image 17" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-18.jpg" alt="Image 18" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-19.jpg" alt="Image 19" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-20.jpg" alt="Image 20" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-21.jpg" alt="Image 21" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-22.jpg" alt="Image 22" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-23.jpg" alt="Image 23" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-24.jpg" alt="Image 24" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-25.jpg" alt="Image 25" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-26.jpg" alt="Image 26" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-27.jpg" alt="Image 27" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-28.jpg" alt="Image 28" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-29.jpg" alt="Image 29" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-30.jpg" alt="Image 30" /></div>
-      <div class="swiper-slide"><img src="gallery/gallery-31.jpg" alt="Image 31" /></div>
+  <!-- Project Gallery -->
+  <section class="highlights" id="gallery">
+    <div class="container">
+      <h2 class="section-title">Our Project Gallery</h2>
+      <p class="section-intro">
+        Explore selected project images showcasing our engineering, flange management, maintenance, and field support operations.
+      </p>
+
+      <div class="swiper projectSwiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide gallery-slide">
+            <img src="images/gallery1.jpg" alt="Project Gallery 1">
+            <div class="gallery-caption">
+              <h4>Flange Management Operations</h4>
+              <p>Precision bolting and joint integrity support in critical industrial environments.</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide gallery-slide">
+            <img src="images/gallery2.jpg" alt="Project Gallery 2">
+            <div class="gallery-caption">
+              <h4>Field Technical Support</h4>
+              <p>Responsive engineering and maintenance support for field-based operations.</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide gallery-slide">
+            <img src="images/gallery3.jpg" alt="Project Gallery 3">
+            <div class="gallery-caption">
+              <h4>Maintenance & Inspection</h4>
+              <p>Inspection-driven support to improve asset integrity and operational reliability.</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide gallery-slide">
+            <img src="images/gallery4.jpg" alt="Project Gallery 4">
+            <div class="gallery-caption">
+              <h4>Leak Repair Solutions</h4>
+              <p>Engineered interventions designed to support safe and continuous operation.</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide gallery-slide">
+            <img src="images/gallery5.jpg" alt="Project Gallery 5">
+            <div class="gallery-caption">
+              <h4>Hydraulic Torque & Tensioning</h4>
+              <p>Controlled assembly using modern calibrated hydraulic equipment.</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide gallery-slide">
+            <img src="images/gallery6.jpg" alt="Project Gallery 6">
+            <div class="gallery-caption">
+              <h4>Industrial Field Operations</h4>
+              <p>Supporting critical project execution across oil & gas and industrial sectors.</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide gallery-slide">
+            <img src="images/gallery7.jpg" alt="Project Gallery 7">
+            <div class="gallery-caption">
+              <h4>Pipeline & Facility Support</h4>
+              <p>Specialized support for safe, efficient, and reliable field operations.</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide gallery-slide">
+            <img src="images/gallery8.jpg" alt="Project Gallery 8">
+            <div class="gallery-caption">
+              <h4>Fabrication & Welding Support</h4>
+              <p>Responsive fabrication and repair services tailored to industrial requirements.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Navigation arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <!-- Pagination dots -->
+        <div class="swiper-pagination"></div>
+      </div>
     </div>
-    <!-- Navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  </div>
-
   </section>
 
+  <!-- Partners -->
   <section class="about" id="partners">
     <div class="container">
       <h2 class="section-title">Our Partners</h2>
       <p class="section-intro">
         Trusted Global Partnerships — collaborating with world-class manufacturers to deliver reliable and certified solutions.
       </p>
+
       <div class="about-grid">
         <div class="about-text">
           <h3>Winner Hydraulics Technology Co. Ltd.</h3>
@@ -579,9 +754,10 @@
             Their hydraulic torque wrenches are manufactured to meet CE Quality Standards, ensuring exceptional safety, precision, and performance in critical flange management and joint integrity operations.
           </p>
           <p>
-            This partnership enables us to deliver reliable, internationally compliant bolting solutions across oil &amp; gas, petrochemical, power generation, marine, and industrial sectors.
+            This partnership enables us to deliver reliable, internationally compliant bolting solutions across oil & gas, petrochemical, power generation, marine, and industrial sectors.
           </p>
         </div>
+
         <div class="about-box">
           <h4>Partnership Value</h4>
           <ul>
@@ -595,6 +771,7 @@
     </div>
   </section>
 
+  <!-- CTA -->
   <section class="cta-section">
     <div class="container">
       <h2>Need Technical Support for Your Next Project?</h2>
@@ -606,6 +783,7 @@
     </div>
   </section>
 
+  <!-- Contact -->
   <section id="contact" class="contact">
     <div class="container">
       <h2 class="section-title">Contact Us</h2>
@@ -636,14 +814,17 @@
               <label for="name">Full Name</label>
               <input type="text" id="name" name="name" placeholder="Your full name" required>
             </div>
+
             <div class="form-group">
               <label for="email">Email Address</label>
               <input type="email" id="email" name="email" placeholder="Your email address" required>
             </div>
+
             <div class="form-group">
               <label for="phone">Phone Number</label>
               <input type="text" id="phone" name="phone" placeholder="Your phone number">
             </div>
+
             <div class="form-group">
               <label for="service">Service Required</label>
               <select id="service" name="service">
@@ -664,10 +845,12 @@
                 <option>BOP Nipple Up / Nipple Down Services</option>
               </select>
             </div>
+
             <div class="form-group">
               <label for="message">Project Details</label>
               <textarea id="message" name="message" placeholder="Tell us about your project or service requirement..."></textarea>
             </div>
+
             <button type="submit" class="btn-primary" style="border:none; cursor:pointer;">Submit Request</button>
           </form>
         </div>
@@ -675,11 +858,50 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <div class="container">
       <p>&copy; 2026 World Reach Global Resources. All Rights Reserved.</p>
     </div>
   </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    const swiper = new Swiper(".projectSwiper", {
+      loop: true,
+      spaceBetween: 20,
+      grabCursor: true,
+
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        640: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        }
+      }
+    });
+  </script>
 
 </body>
 </html>
