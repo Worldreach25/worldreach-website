@@ -1,299 +1,523 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Swiper CSS -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World Reach Global Resources | Engineering, Maintenance & Field Support</title>
+  <meta name="description" content="World Reach Global Resources delivers specialized engineering, maintenance, joint integrity, leak repair, fabrication, and field support solutions for oil & gas, energy, and industrial sectors." />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, sans-serif;
+      color: #0f172a;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
 
-    <title>Worldreach Global Resources Limited - Flange Management Solutions</title>
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #0f172a;
+      color: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+    }
+    .logo {
+      font-size: 1.35rem;
+      font-weight: bold;
+      color: #d4af37;
+      letter-spacing: 0.3px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+    .nav-links a {
+      color: #e2e8f0;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover { color: #d4af37; }
+    .btn-nav {
+      background: #d4af37;
+      color: #0f172a !important;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
 
-    <!-- SEO Meta Description -->
-    <meta name="description" content="Worldreach Global Resources Limited provides professional flange management and joint integrity solutions, delivering leak-free bolted connections across oil & gas, petrochemical, power, marine, and industrial operations worldwide.">
+    /* Hero */
+    .hero {
+      background: linear-gradient(rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.82)),
+        url('https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: white;
+      padding: 110px 0 90px;
+    }
+    .hero-content {
+      max-width: 760px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.08rem;
+      color: #e2e8f0;
+      margin-bottom: 32px;
+      max-width: 680px;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn-primary, .btn-secondary {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: transform 0.25s ease, background 0.25s ease;
+    }
+    .btn-primary {
+      background: #d4af37;
+      color: #0f172a;
+    }
+    .btn-primary:hover {
+      background: #c49b23;
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      border: 2px solid #ffffff;
+      color: #ffffff;
+    }
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-2px);
+    }
 
-    <!-- SEO Keywords -->
-    <meta name="keywords" content="flange management solutions, joint integrity services, hydraulic bolt torquing, bolt tensioning, oil and gas maintenance, industrial bolting services Nigeria">
+    /* Highlights */
+    .highlights {
+      padding: 70px 0;
+      background: #f8fafc;
+    }
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+    }
+    .highlight-card {
+      background: #fff;
+      padding: 28px 24px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+      border-top: 4px solid #d4af37;
+    }
+    .highlight-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.15rem;
+    }
+    .highlight-card p {
+      color: #475569;
+      font-size: 0.98rem;
+    }
 
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Worldreach Global Resources Limited – Flange Management Solutions">
-    <meta property="og:description" content="Professional flange management and joint integrity solutions delivering leak-free bolted connections across oil & gas, petrochemical, power, marine, and industrial operations.">
-    <meta property="og:image" content="https://worldreachglobalresources.com/gallery/logo2.png">
-    <meta property="og:url" content="https://worldreachglobalresources.com">
-    <meta property="og:type" content="website">
+    /* About */
+    .about {
+      padding: 90px 0;
+      background: #ffffff;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 18px;
+      font-size: 2.3rem;
+    }
+    .section-intro {
+      text-align: center;
+      max-width: 850px;
+      margin: 0 auto 55px;
+      color: #475569;
+      font-size: 1.05rem;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .about-text h3 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+    }
+    .about-text p {
+      color: #475569;
+      margin-bottom: 18px;
+      font-size: 1rem;
+    }
+    .about-box {
+      background: #0f172a;
+      color: #fff;
+      padding: 36px;
+      border-radius: 14px;
+    }
+    .about-box h4 {
+      color: #d4af37;
+      margin-bottom: 14px;
+      font-size: 1.4rem;
+    }
+    .about-box ul {
+      list-style: none;
+    }
+    .about-box li {
+      margin-bottom: 12px;
+      color: #e2e8f0;
+    }
 
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    /* Services */
+    .services-section {
+      padding: 90px 0;
+      background: #f8f9fb;
+    }
+    .service-category {
+      margin-bottom: 60px;
+    }
+    .service-category h3 {
+      font-size: 1.8rem;
+      color: #0f172a;
+      margin-bottom: 28px;
+      border-left: 5px solid #d4af37;
+      padding-left: 15px;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .service-card {
+      background: #ffffff;
+      padding: 28px 24px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+    }
+    .service-card h4 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+    }
+    .service-card p {
+      color: #475569;
+      font-size: 0.98rem;
+    }
+    .quality-section {
+      background: #0f172a;
+      color: #ffffff;
+      padding: 50px 35px;
+      border-radius: 14px;
+      margin-top: 20px;
+      margin-bottom: 60px;
+    }
+    .quality-section h3 {
+      font-size: 1.8rem;
+      margin-bottom: 18px;
+      color: #d4af37;
+    }
+    .quality-section p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #e2e8f0;
+    }
+
+    /* CTA */
+    .cta-section {
+      padding: 85px 0;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-size: 2.3rem;
+      margin-bottom: 16px;
+    }
+    .cta-section p {
+      max-width: 760px;
+      margin: 0 auto 28px;
+      color: #cbd5e1;
+      font-size: 1.05rem;
+    }
+
+    /* Contact */
+    .contact {
+      padding: 90px 0;
+      background: #ffffff;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 34px;
+      align-items: start;
+    }
+    .contact-info {
+      background: #f8fafc;
+      padding: 34px;
+      border-radius: 14px;
+    }
+    .contact-info h3 {
+      font-size: 1.7rem;
+      margin-bottom: 18px;
+    }
+    .contact-info p {
+      color: #475569;
+      margin-bottom: 14px;
+    }
+    .contact-form {
+      background: #f8fafc;
+      padding: 34px;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    }
+    .contact-form h3 {
+      font-size: 1.7rem;
+      margin-bottom: 20px;
+    }
+    .form-group { margin-bottom: 16px; }
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 0.98rem;
+      outline: none;
+      background: #fff;
+    }
+    .form-group textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    /* Footer */
+    footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      padding: 34px 0;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+    }
+    @media (max-width: 768px) {
+      .nav {
+        flex-direction: column;
+        gap: 14px;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+      }
+      .hero {
+        padding: 85px 0 75px;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .section-title,
+      .cta-section h2 {
+        font-size: 1.9rem;
+      }
+      .service-category h3,
+      .quality-section h3,
+      .about-text h3,
+      .contact-form h3,
+      .contact-info h3 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
-   <nav class="navbar">
-  <div class="nav-container">
-    <div class="nav-logo">
-      <img src="gallery/logo2.png" alt="Worldreach Logo" class="logo" />
-      <div class="company-text">
-        <h2>WorldReach Global Resources Limited</h2>
-        <span>RC 1212971</span>
+
+  <header>
+    <div class="container nav">
+      <div class="logo">World Reach Global Resources</div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="btn-nav">Request a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <h1>Engineering, Maintenance & Field Support Solutions for Critical Operations</h1>
+      <p>
+        World Reach Global Resources provides specialized technical services across joint integrity,
+        leak repair, fabrication, field support, and industrial maintenance for the oil & gas,
+        energy, and industrial sectors.
+      </p>
+      <div class="hero-buttons">
+        <a href="#services" class="btn-primary">Explore Services</a>
+        <a href="#contact" class="btn-secondary">Contact Us</a>
       </div>
     </div>
-    <ul class="nav-menu">
-      <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-      <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-      <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
-      <li class="nav-item"><a href="#industries" class="nav-link">Industries</a></li>
-      <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-    </ul>
+  </section>
 
-    <div class="hamburger">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
-  </div>
-</nav>
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-background">
-            <div class="hero-overlay"></div>
+  <section class="highlights">
+    <div class="container">
+      <div class="highlight-grid">
+        <div class="highlight-card">
+          <h3>Safety-Driven Delivery</h3>
+          <p>Operations executed with a strong focus on safety, compliance, and risk control.</p>
         </div>
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <i class="fas fa-award"></i>
-                    <span>Industry Leading Leak-Free Solutions. Tested And Trusted</span>
-                </div>
-                <h1 class="hero-title">
-                    Professional Flange Management Solutions
-                </h1>
-                <p class="hero-subtitle">
-                    Ensuring leak-free bolted connections and joint integrity across critical industrial-piping operations with expert precision and reliability. 
-                </p>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <div class="stat-number">35+</div>
-                        <div class="stat-label">Combined Years of Experience</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">100+</div>
-                        <div class="stat-label">Projects Completed</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">Support Available</div>
-                    </div>
-                </div>
-                <div class="hero-buttons">
-                    <a href="#services" class="btn btn-primary">
-                        <i class="fas fa-tools"></i>
-                        Our Services
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <i class="fas fa-phone"></i>
-                        Get Quote
-                    </a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="hero-graphic">
-                    <div class="floating-element element-1">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <div class="floating-element element-2">
-                        <i class="fas fa-wrench"></i>
-                    </div>
-                    <div class="floating-element element-3">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <div class="central-graphic">
-                        <i class="fas fa-industry"></i>
-                    </div>
-                </div>
-            </div>
+        <div class="highlight-card">
+          <h3>Specialized Technical Support</h3>
+          <p>Skilled field personnel and engineering support tailored to critical industrial operations.</p>
         </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow">
-                <i class="fas fa-chevron-down"></i>
-            </div>
+        <div class="highlight-card">
+          <h3>Reliable Project Execution</h3>
+          <p>Responsive maintenance and project support designed to reduce downtime and improve performance.</p>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="about-background">
-            <div class="about-overlay"></div>
+        <div class="highlight-card">
+          <h3>Operational Integrity</h3>
+          <p>Structured solutions that support asset reliability, production continuity, and service quality.</p>
         </div>
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <i class="fas fa-building"></i>
-                    <span>About Us</span>
-                </div>
-                <h2>About Worldreach Global Resources Limited</h2>
-                <p>Leading the industry in flange management and joint integrity solutions, our hydraulic bolt torquing and tensioning services directly address the issue of incorrect bolt load. By ensuring precise preload in bolted joints, we help guarantee critical joint integrity.</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-<section class="methodology">
-  <div class="container">
-    <div class="section-header">
-      <h2>Our Work Methodology</h2>
-      <p>A structured, safety-driven approach to every project</p>
-    </div>
-
-    <div class="method-steps">
-      <div class="step">
-        <h4>1. Engineering Review</h4>
-        <p>Evaluation of flange type, gasket, bolting and torque requirements.</p>
-      </div>
-      <div class="step">
-        <h4>2. Controlled Assembly</h4>
-        <p>Hydraulic torque or tensioning using calibrated equipment.</p>
-      </div>
-      <div class="step">
-        <h4>3. Verification & Inspection</h4>
-        <p>Load verification, leak checks and quality assurance.</p>
-      </div>
-      <div class="step">
-        <h4>4. Documentation</h4>
-        <p>Complete reporting for traceability and compliance.</p>
       </div>
     </div>
-  </div>
-</section>
-                   <h3>Our Mission</h3>
-                    <p>
-                        At Worldreach Global Resources Limited, our mission is to deliver industry-leading flange management and joint integrity solutions that uphold the highest standards of safety, reliability, and operational excellence. Through the expertise of our certified professionals and a commitment to innovation, we strive to support critical industrial operations across diverse sectors—ensuring leak-free performance, minimized downtime, and long-term asset integrity.
- </p>
- <h3>Our Vision</h3>
-To be the most trusted provider of integrated joint integrity solutions, recognized for our precision, professionalism, and unwavering dedication to industrial safety and performance.
-                    </p>
-                    <h3>Why Choose Us</h3>
-                    <div class="features-grid">
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <h4>Safety First</h4>
-                            <p>Rigorous safety protocols and compliance with international standards</p>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-globe"></i>
-                            </div>
-                            <h4>World-Class Service</h4>
-                            <p>World-class services delivered through local expertise and support</p>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-tools"></i>
-                            </div>
-                            <h4>Expert Team</h4>
-                            <p>Certified professionals with extensive industry experience</p>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <h4>24/7 Support</h4>
-                            <p>Round-the-clock emergency response and technical assistance</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="services-background">
-            <div class="services-overlay"></div>
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <p class="section-intro">
+        We support industrial operations with dependable engineering, maintenance, and field service solutions designed to keep critical systems safe, efficient, and operational.
+      </p>
+
+      <div class="about-grid" style="margin-bottom:40px;">
+        <div class="about-box" style="background:#f8fafc; color:#0f172a;">
+          <h4 style="color:#0f172a;">Our Mission</h4>
+          <p style="color:#475569;">
+            At Worldreach Global Resources Limited, our mission is to deliver industry-leading flange management and joint integrity solutions that uphold the highest standards of safety, reliability, and operational excellence. Through the expertise of our certified professionals and a commitment to innovation, we strive to support critical industrial operations across diverse sectors—ensuring leak-free performance, minimized downtime, and long-term asset integrity.
+          </p>
         </div>
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <i class="fas fa-cogs"></i>
-                    <span>Our Services</span>
-                </div>
-                <h2>Comprehensive Solutions</h2>
-                <p>At Worldreach Global Resources Limited, we deliver end-to-end flange management solutions customized to meet your operational needs. Our expertise combines both hydraulic bolt torquing and hydraulic bolt tensioning—two proven techniques for achieving precise, leak-free joint integrity. Whether optimizing for consistency or tackling large-diameter applications, our approach ensures safe, reliable, and efficient performance across critical systems.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-wrench"></i>
-                    </div>
-                    <h3>Flange Management</h3>
-                    <p>Complete lifecycle management of critical flanges including assembly, maintenance, and monitoring to ensure leak-free operations.</p>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Proper assembly procedures</li>
-                        <li><i class="fas fa-check"></i> Torque specifications</li>
-                        <li><i class="fas fa-check"></i> Gasket selection</li>
-                        <li><i class="fas fa-check"></i> Quality assurance</li>
-                        <li><i class="fas fa-check"></i> Hot-Bolting</li>
-                        <li><i class="fas fa-check"></i> Flange Facing</li>
-                    </ul>
-                    <div class="service-hover-effect"></div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <h3>Joint Integrity Services</h3>
-                    <p>Advanced inspection and testing services to maintain the integrity of bolted connections throughout their operational life.</p>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Leak detection</li>
-                        <li><i class="fas fa-check"></i> Bolt stress monitoring</li>
-                        <li><i class="fas fa-check"></i> Gasket condition assessment</li>
-                        <li><i class="fas fa-check"></i> Preventive maintenance</li>
-                    </ul>
-                    <div class="service-hover-effect"></div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-user-hard-hat"></i>
-                    </div>
-                    <h3>On-Site Technical Support</h3>
-                    <p>Expert technicians providing on-location support for critical flange operations and emergency response services.</p>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Emergency repairs</li>
-                        <li><i class="fas fa-check"></i> Technical consultation</li>
-                        <li><i class="fas fa-check"></i> Training programs</li>
-                        <li><i class="fas fa-check"></i> Equipment supply</li>
-                    </ul>
-                    <div class="service-hover-effect"></div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-clipboard-check"></i>
-                    </div>
-                    <h3>Maintenance & Inspection</h3>
-                    <p>Scheduled maintenance programs and comprehensive inspection services to prevent failures and extend equipment life.</p>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Routine inspections</li>
-                        <li><i class="fas fa-check"></i> Maintenance scheduling</li>
-                        <li><i class="fas fa-check"></i> Documentation</li>
-                        <li><i class="fas fa-check"></i> Compliance reporting</li>
-                    </ul>
-                    <div class="service-hover-effect"></div>
-                </div>
-            </div>
+        <div class="about-box">
+          <h4>Our Vision</h4>
+          <p style="color:#e2e8f0;">
+            To be the most trusted provider of integrated joint integrity solutions, recognized for our precision, professionalism, and unwavering dedication to industrial safety and performance.
+          </p>
         </div>
-<section class="certifications">
-  <div class="container">
-    <div class="section-header">
-      <h2>Certifications & Standards</h2>
-      <p>We operate in strict compliance with international and industry-recognized standards.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <h3>Trusted Technical Support for Demanding Environments</h3>
+          <p>
+            World Reach Global Resources is committed to delivering practical, high-quality service solutions that support maintenance, reliability, and operational performance across the oil & gas, energy, and industrial sectors.
+          </p>
+          <p>
+            Our team focuses on disciplined execution, responsive support, and service delivery built around client requirements, technical precision, and safe work practices.
+          </p>
+          <a href="#contact" class="btn-primary">Speak With Our Team</a>
+        </div>
+
+        <div class="about-box">
+          <h4>What Sets Us Apart</h4>
+          <ul>
+            <li>✔ Experienced engineers with over 35 years combined expertise</li>
+            <li>✔ Modern hydraulic torque &amp; tensioning equipment</li>
+            <li>✔ Zero-leak philosophy on critical joints</li>
+            <li>✔ Fast mobilization and 24/7 emergency response</li>
+            <li>✔ Strong HSE culture and detailed reporting</li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <ul class="cert-list">
-      <li>ASME PCC-1 – Guidelines for Pressure Boundary Bolted Flange Joint Assembly</li>
-      <li>API RP 621 – Flange Joint Assembly</li>
-      <li>ISO 9001 – Quality Management Systems</li>
-      <li>OEM torque & tensioning specifications</li>
-      <li>Site-specific HSE procedures</li>
-    </ul>
-  </div>
-</section>
+  <section id="services" class="services-section">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-intro">
+        We deliver specialized engineering, maintenance, and field support services tailored to the operational demands of the oil & gas, energy, and industrial sectors.
+      </p>
+
+      <div class="service-category">
+        <h3>Core Joint Integrity & Technical Services</h3>
+        <div class="services-grid">
+          <div class="service-card"><h4>Flange Management</h4><p>Complete lifecycle management of flange connections to ensure leak-free, safe, and reliable operations across critical systems.</p><p style="margin-top:12px;"><strong>Our Work Methodology</strong></p><p><strong>1. Engineering Review:</strong> Evaluation of flange type, gasket, bolting, and torque requirements.</p><p><strong>2. Controlled Assembly:</strong> Hydraulic torque or tensioning using calibrated equipment.</p><p><strong>3. Verification &amp; Inspection:</strong> Load verification, leak checks, and quality assurance.</p><p><strong>4. Documentation:</strong> Complete reporting for traceability and compliance.</p><p style="margin-top:12px;"><strong>Certifications &amp; Standards</strong></p><p>We operate in strict compliance with international and industry-recognized standards including ASME PCC-1, API RP 621, ISO 9001, OEM torque &amp; tensioning specifications, and site-specific HSE procedures.</p></div>
+          <div class="service-card"><h4>Joint Integrity Services</h4><p>Inspection, verification, and technical support solutions that help maintain the reliability and safety of bolted joint systems.</p></div>
+          <div class="service-card"><h4>On-Site Technical Support</h4><p>Skilled technical personnel available to support field execution, maintenance operations, and specialized industrial requirements.</p></div>
+          <div class="service-card"><h4>Maintenance & Inspection</h4><p>Preventive and corrective maintenance support, including inspection services aimed at improving operational efficiency and asset integrity.</p></div>
+        </div>
+      </div>
+
+      <div class="service-category">
+        <h3>Additional Engineering & Maintenance Services</h3>
+        <div class="services-grid">
+          <div class="service-card"><h4>Under Pressure Leak Repair</h4><p>Engineered leak-sealing solutions designed to help clients maintain system integrity and minimize downtime without unnecessary shutdowns.</p></div>
+          <div class="service-card"><h4>Topside & Subsea Repair Clamps</h4><p>Supply and technical support for OEM repair clamps sourced through strategic global partnerships for both topside and subsea applications.</p></div>
+          <div class="service-card"><h4>Well Intervention Support</h4><p>Specialized support services for modifying well conditions, conducting diagnostics, and improving production performance.</p></div>
+          <div class="service-card"><h4>Cold Cutting Services</h4><p>Safe, spark-free cutting solutions for tanks, pipelines, and industrial components in hazardous or sensitive operating environments.</p></div>
+          <div class="service-card"><h4>Fabrication & Welding Services</h4><p>Responsive fabrication and welding support for plant maintenance, equipment repairs, and project execution requirements.</p></div>
+          <div class="service-card"><h4>Integrated Power & UPS Solutions</h4><p>Customized uninterrupted power supply systems designed to support office, field, and production-critical operations.</p></div>
+        </div>
+      </div>
+
+      <div class="service-category">
+        <h3>Field Operations & Specialist Support</h3>
+        <div class="services-grid">
+          <div class="service-card"><h4>Pipeline Pre-Commissioning Support</h4><p>Technical support services to help ensure piping and pipeline systems are prepared for safe, reliable, and efficient operation.</p></div>
+          <div class="service-card"><h4>Cased Hole Support Services</h4><p>Support for production logging, perforation, plug and packer setting, and multi-finger caliper operations.</p></div>
+          <div class="service-card"><h4>Oil & Gas Facilities Maintenance</h4><p>Certified maintenance support including hydro-jetting, flushing, chemical cleaning, nitrogen leak testing, integrity testing, and tank calibration.</p></div>
+          <div class="service-card"><h4>Industrial Scaffolding Services</h4><p>Safe and dependable scaffolding solutions for industrial maintenance, shutdowns, and construction support.</p></div>
+          <div class="service-card"><h4>Rigging & Lifting Services</h4><p>Specialized lifting and rigging support for both offshore and onshore oil and gas operations.</p></div>
+          <div class="service-card"><h4>BOP Nipple Up / Nipple Down Services</h4><p>Installation, assembly, dismantling, and removal of BOP stacks and pressure control equipment with a strong focus on safety and precision.</p></div>
+        </div>
+      </div>
+
+      <div class="quality-section">
+        <h3>Operational Excellence, Quality & Safety</h3>
+        <p>
+          Our operations are built around quality, safety, and continuous improvement. We establish and maintain structured processes that support efficient project delivery and consistent service outcomes. Through disciplined execution, skilled personnel, and a culture of accountability, we remain committed to meeting client expectations across every phase of work.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  </section>
 <section id="gallery">
   <h2>Our Project Gallery</h2>
   <!-- Swiper container -->
@@ -336,292 +560,126 @@ To be the most trusted provider of integrated joint integrity solutions, recogni
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
   </div>
-</section>
-    <!-- Industries Section -->
-    <section id="industries" class="industries">
-        <div class="industries-background">
-            <div class="industries-overlay"></div>
-        </div>
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <i class="fas fa-industry"></i>
-                    <span>Industries</span>
-                </div>
-                <h2>Industries We Serve</h2>
-                <p>Trusted by leading companies across multiple sectors</p>
-            </div>
-            <div class="industries-grid">
-                <div class="industry-card">
-                    <div class="industry-icon">
-                        <i class="fas fa-oil-well"></i>
-                    </div>
-                    <h3>Oil & Gas</h3>
-                    <p>Upstream, midstream, and downstream operations requiring critical flange integrity</p>
-                    <div class="industry-hover-effect"></div>
-                </div>
-                <div class="industry-card">
-                    <div class="industry-icon">
-                        <i class="fas fa-industry"></i>
-                    </div>
-                    <h3>Petrochemical</h3>
-                    <p>Chemical processing facilities with demanding safety and environmental requirements</p>
-                    <div class="industry-hover-effect"></div>
-                </div>
-                <div class="industry-card">
-                    <div class="industry-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3>Power Generation</h3>
-                    <p>Thermal plants facility requiring reliable connections</p>
-                    <div class="industry-hover-effect"></div>
-                </div>
-                <div class="industry-card">
-                    <div class="industry-icon">
-                        <i class="fas fa-ship"></i>
-                    </div>
-                    <h3>Marine & Offshore</h3>
-                    <p>Offshore platforms and marine vessels operating in challenging environments</p>
-                    <div class="industry-hover-effect"></div>
-                </div>
-                <div class="industry-card">
-                    <div class="industry-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>Manufacturing</h3>
-                    <p>Industrial manufacturing processes requiring precision and reliability</p>
-                    <div class="industry-hover-effect"></div>
-                </div>
-                <div class="industry-card">
-                    <div class="industry-icon">
-                        <i class="fas fa-flask"></i>
-                    </div>
-                    <h3>Chemical Processing</h3>
-                    <p>Specialized chemical plants with stringent safety and quality standards</p>
-                    <div class="industry-hover-effect"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-<section class="value-proposition">
-  <div class="container">
-    <h2>What Sets Us Apart</h2>
-    <ul>
-      <li>✔ Experienced engineers with over 35 years combined expertise</li>
-      <li>✔ Modern hydraulic torque & tensioning equipment</li>
-      <li>✔ Zero-leak philosophy on critical joints</li>
-      <li>✔ Fast mobilization and 24/7 emergency response</li>
-      <li>✔ Strong HSE culture and detailed reporting</li>
-    </ul>
-  </div>
-</section>
-<!-- Partners Section -->
-<section id="partners" class="partners">
+
+  </section>
+
+  <section class="about" id="partners">
     <div class="container">
-        <div class="section-header">
-            <div class="section-badge">
-                <i class="fas fa-handshake"></i>
-                <span>Our Partners</span>
-            </div>
-            <h2>Trusted Global Partnerships</h2>
-            <p>Collaborating with world-class manufacturers to deliver reliable and certified solutions</p>
+      <h2 class="section-title">Our Partners</h2>
+      <p class="section-intro">
+        Trusted Global Partnerships — collaborating with world-class manufacturers to deliver reliable and certified solutions.
+      </p>
+      <div class="about-grid">
+        <div class="about-text">
+          <h3>Winner Hydraulics Technology Co. Ltd.</h3>
+          <p>
+            World Reach Global Resources Limited proudly partners with Winner Hydraulics Technology Co. Ltd., a globally recognized manufacturer of advanced hydraulic bolting equipment.
+          </p>
+          <p>
+            Their hydraulic torque wrenches are manufactured to meet CE Quality Standards, ensuring exceptional safety, precision, and performance in critical flange management and joint integrity operations.
+          </p>
+          <p>
+            This partnership enables us to deliver reliable, internationally compliant bolting solutions across oil &amp; gas, petrochemical, power generation, marine, and industrial sectors.
+          </p>
         </div>
-
-        <div class="partners-content">
-            <div class="partner-card">
-                <h3>Winner Hydraulics Technology Co. Ltd.</h3>
-                <p>
-                    Worldreach Global Resources Limited proudly partners with Winner Hydraulics Technology Co. Ltd.,
-                    a globally recognized manufacturer of advanced hydraulic bolting equipment.
-                </p>
-                <p>
-                    Their hydraulic torque wrenches are manufactured to meet
-                    <strong>CE Quality Standards</strong>, ensuring exceptional safety, precision,
-                    and performance in critical flange management and joint integrity operations.
-                </p>
-                <p>
-                    This partnership enables us to deliver reliable, internationally compliant
-                    bolting solutions across oil & gas, petrochemical, power generation,
-                    marine, and industrial sectors.
-                </p>
-            </div>
+        <div class="about-box">
+          <h4>Partnership Value</h4>
+          <ul>
+            <li>✔ Access to advanced hydraulic bolting equipment</li>
+            <li>✔ International quality and compliance support</li>
+            <li>✔ Reliable torque and tensioning performance</li>
+            <li>✔ Stronger technical delivery for critical operations</li>
+          </ul>
         </div>
+      </div>
     </div>
-</section>
- <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <i class="fas fa-envelope"></i>
-                    <span>Contact Us</span>
-                </div>
-                <h2>Get In Touch</h2>
-                <p>Ready to discuss your flange management needs? Contact our experts today</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <h4>Office</h4>
-                            <p>No. 29, Eliwelibo Road, Mandela Estate<br>
-                            off SARS Road, Port Harcourt<br>
-                            Rivers State, Nigeria</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div>
-                            <h4>Mobile Phones</h4> 
-                        <p>Engr. Festus Idigun +234 (0) 803 339 1556</p>                      
-                        <p>Engr. Sunny Avwenake +234 (0) 912 343 6005</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>office@worldreachglobalresourcesltd.com</p>
-                            <p>worldreachgb_ltd@outlook.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div>
-                            <h4>Business Hours</h4>
-                            <p>24/7 Emergency Support<br>
-                            Office: Mon-Fri 8:00-18:00 (Sat 9:00-14:00)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-    <form action="https://formsubmit.co/richyreach@gmail.com" method="POST">
-        <!-- Hidden config fields -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="New Contact Form Submission">
-        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+  </section>
 
-        <div class="form-row">
-            <div class="form-group">
-                <input type="text" name="name" placeholder="Your name" required>
-                <i class="fas fa-user"></i>
-            </div>
-            <div class="form-group">
-                <input type="email" name="email" placeholder="Your email" required>
-                <i class="fas fa-envelope"></i>
-            </div>
+  <section class="cta-section">
+    <div class="container">
+      <h2>Need Technical Support for Your Next Project?</h2>
+      <p>
+        Speak with our team about your maintenance, engineering, fabrication, leak repair,
+        field support, or operational service requirements.
+      </p>
+      <a href="#contact" class="btn-primary">Request a Quote</a>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-intro">
+        Let’s discuss how we can support your operations with reliable technical and field service solutions.
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Get In Touch</h3>
+          <p><strong>Company:</strong> World Reach Global Resources Limited</p>
+          <p><strong>Address:</strong> No. 29, Eliwelibo Road, Mandela Estate, off SARS Road, Port Harcourt, Rivers State, Nigeria.</p>
+          <p><strong>Email:</strong> info@worldreachglobalresources.com</p>
+          <p><strong>Alternate Email:</strong> worldreachgb_ltd@outlook.com</p>
+          <p><strong>Mobile:</strong> +234 (0) 912 343 6005</p>
+          <p><strong>Mobile:</strong> +234 803 341 0231</p>
+          <p><strong>Mobile:</strong> +234 803 759 2111</p>
+          <p><strong>Support:</strong> Engineering, Maintenance, Joint Integrity, Leak Repair &amp; Field Operations</p>
+          <p>
+            Reach out to discuss your project scope, technical requirements, or request a tailored service proposal.
+          </p>
         </div>
-        <div class="form-row">
+
+        <div class="contact-form">
+          <h3>Request a Quote</h3>
+          <form>
             <div class="form-group">
-                <input type="text" name="company" placeholder="Company">
-                <i class="fas fa-building"></i>
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required>
             </div>
             <div class="form-group">
-                <input type="tel" name="phone" placeholder="Phone Number">
-                <i class="fas fa-phone"></i>
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="Your email address" required>
             </div>
-        </div>
-        <div class="form-group">
-            <select name="service" required>
-                <option value="">Select Service</option>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="text" id="phone" name="phone" placeholder="Your phone number">
+            </div>
+            <div class="form-group">
+              <label for="service">Service Required</label>
+              <select id="service" name="service">
+                <option>Select a service</option>
                 <option>Flange Management</option>
                 <option>Joint Integrity Services</option>
-                <option>On-Site Support</option>
-                <option>Maintenance & Inspection</option>
-                <option>Emergency Response</option>
-            </select>
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="form-group">
-            <textarea name="message" placeholder="Project Description" rows="4" required></textarea>
-            <i class="fas fa-comment"></i>
-        </div>
-        <button type="submit" class="btn btn-primary">
-            <i class="fas fa-paper-plane"></i>
-            Send Message
-        </button>
-    </form>
-</div>
-</div>
- </div>
-    </section>
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Worldreach Global Resources Limited</h3>
-                    <p>Professional flange management solutions ensuring safety, reliability, and operational excellence across global industrial operations.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#services">Flange Management</a></li>
-                        <li><a href="#services">Joint Integrity</a></li>
-                        <li><a href="#services">Technical Support</a></li>
-                        <li><a href="#services">Maintenance</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Industries</h4>
-                    <ul>
-                        <li><a href="#industries">Oil & Gas</a></li>
-                        <li><a href="#industries">Petrochemical</a></li>
-                        <li><a href="#industries">Power Generation</a></li>
-                        <li><a href="#industries">Marine & Offshore</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p><i class="fas fa-phone"></i> +234 (0) 912 343 6005</p>
-                    <p><i class="fas fa-phone"></i> +234 (0) 803 339 1556</p>
-                    <p><i class="fas fa-envelope"></i> office@worldreachglobalresourcesltd.com</p>
-                    <p><i class="fas fa-envelope"></i> worldreachgb_ltd@outlook.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Port-Harcourt, Nigeria</p>
-                </div>
+                <option>Under Pressure Leak Repair</option>
+                <option>Repair Clamps (Topside & Subsea)</option>
+                <option>Well Intervention Support</option>
+                <option>Cold Cutting Services</option>
+                <option>Fabrication & Welding Services</option>
+                <option>Integrated Power & UPS Solutions</option>
+                <option>Pipeline Pre-Commissioning Support</option>
+                <option>Cased Hole Support Services</option>
+                <option>Oil & Gas Facilities Maintenance</option>
+                <option>Industrial Scaffolding Services</option>
+                <option>Rigging & Lifting Services</option>
+                <option>BOP Nipple Up / Nipple Down Services</option>
+              </select>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Worldreach Global Resources Limited. All rights reserved.</p>
+            <div class="form-group">
+              <label for="message">Project Details</label>
+              <textarea id="message" name="message" placeholder="Tell us about your project or service requirement..."></textarea>
             </div>
+            <button type="submit" class="btn-primary" style="border:none; cursor:pointer;">Submit Request</button>
+          </form>
         </div>
-    </footer>
-    <script src="script.js"></script>
-<!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-  const swiper = new Swiper('.swiper-container', {
-    loop: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    slidesPerView: 1,
-    spaceBetween: 20,
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
-    },
-  });
-</script>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 World Reach Global Resources. All Rights Reserved.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
-
